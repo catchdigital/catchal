@@ -5,12 +5,8 @@ const FractalWebpackPlugin = require('fractal-webpack-plugin');
 module.exports = {
   mode: 'development',
   entry: {
-    // docs: {
-    //   import: path.join(__dirname, "src", "fractal.js"),
-    // },
     app: {
       import: path.join(__dirname, "src", "index.js"),
-      // dependOn: 'docs'
     }
   },
   output: {
@@ -46,16 +42,17 @@ module.exports = {
     new FractalWebpackPlugin({
       mode: 'build', // mode: 'server'
     }),
-    new HtmlWebpackPlugin({
-      template: path.join(__dirname, "dist", "index.html"),
-    }),
+    // new HtmlWebpackPlugin({
+    //   template: path.join(__dirname, "build", "index.html"),
+    // }),
   ],
   devServer: {
     server: 'https',
+    hot: true,
     liveReload: true,
     watchFiles: './src',
     static: [{
-      directory: path.join(__dirname, 'dist'),
+      directory: path.join(__dirname, 'build'),
       serveIndex: true,
       watch: false,
     }]

@@ -13,7 +13,7 @@ fractal.components.set('path', __dirname + '/src/components');
 fractal.docs.set('path', __dirname + '/docs');
 
 /* Specify a directory of static assets */
-fractal.web.set('static.path', __dirname + '/build');
+fractal.web.set('static.path', __dirname + '/dist');
 
 /* Specify a directory for the build */
-fractal.web.set('builder.dest', __dirname + '/dist');
+fractal.web.set('builder.dest', __dirname + '/build');

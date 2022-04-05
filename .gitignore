@@ -1,5 +1,6 @@
 # Ignore build folders
 /dist
+/build
 
 # Node files
 node_modules
