@@ -1,5 +1,4 @@
 const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const FractalWebpackPlugin = require('fractal-webpack-plugin');
 
 module.exports = {
@@ -40,14 +39,11 @@ module.exports = {
   },
   plugins: [
     new FractalWebpackPlugin({
-      mode: 'build', // mode: 'server'
-    }),
-    // new HtmlWebpackPlugin({
-    //   template: path.join(__dirname, "build", "index.html"),
-    // }),
+      mode: 'build',
+    })
   ],
   devServer: {
-    server: 'https',
+    server: 'spdy',
     hot: true,
     liveReload: true,
     watchFiles: './src',

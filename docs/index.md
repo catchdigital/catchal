@@ -1,4 +1,4 @@
 ---
-title: Index
+title: Fratch
 ---
-A prototyping framework.
+A prototyping framework which allow for isolated react components into Fractal.
